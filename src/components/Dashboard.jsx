@@ -2,6 +2,8 @@ import SideNavbar from "./SideNavbar";
 import { Grid, Typography } from "@mui/material";
 import WidgetComp from "./WidgetsComp";
 import StatsCards from "./StatsCards/StatsCards";
+import StatsCards2 from "./StatsCards/StatsCards2";
+import SalesTable from "./StatsCards/SalesTable";
 
 const Dashboard = () => {
   return (
@@ -13,6 +15,7 @@ const Dashboard = () => {
         width: "100vw",
         height: "100vh",
       }}
+      direction="row"
     >
       <Grid
         item
@@ -33,7 +36,7 @@ const Dashboard = () => {
         md={10}
         style={{ background: "#F5F5F5", padding: "16px", minHeight: "100vh" }}
       >
-        <Grid container spacing={3}>
+        <Grid container direction="column"spacing={3}>
           {/* {Array(9)
             .fill()
             .map((_, index) => (
@@ -41,7 +44,15 @@ const Dashboard = () => {
                 <WidgetComp />
               </Grid>
             ))} */}
-          <StatsCards />
+          <Grid item>
+            <StatsCards />
+          </Grid>
+          <Grid item>
+            <StatsCards2 />
+          </Grid>
+          <Grid item>
+            <SalesTable />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
