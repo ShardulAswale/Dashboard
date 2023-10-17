@@ -1,7 +1,7 @@
 import { Grid, Paper } from "@mui/material";
 import CardWithBarGraph from "./Graph";
 // import CustomerStats from "./CustomerStats";
-import DoughnutCard from "./CustomerStats";
+// import DoughnutCard from "./CustomerStats";
 
 const StatsCards2 = () => {
   return (
@@ -10,7 +10,8 @@ const StatsCards2 = () => {
         <CardWithBarGraph />
       </Grid>
       <Grid item xs={4} md={4}>
-        <DoughnutCard />
+        {/* <DoughnutCard /> */}
+        <Paper>blank for now </Paper>
       </Grid>
     </Grid>
   );
